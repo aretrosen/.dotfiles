@@ -1,0 +1,13 @@
+{
+  "pyprland": {
+    "plugins": ["scratchpads", "workspaces_follow_focus"]
+  },
+  "scratchpads": {
+    "term": {
+      "command": "foot --app-id footdropterm -o colors.alpha=0.95",
+      "animation": "fromTop",
+      "margin": 40,
+      "unfocus": "hide"
+    }
+  }
+}
