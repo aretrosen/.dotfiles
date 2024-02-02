@@ -1,0 +1,6 @@
+[submodule "zsh"]
+	path = zsh
+	url = git@github.com:aretrosen/zsh.git
+[submodule "/home/aretro/.config/zsh"]
+	path = /home/aretro/.config/zsh
+	url = git@github.com:aretrosen/zsh.git
