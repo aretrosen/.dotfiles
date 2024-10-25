@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <optionList>
+    <group allowMultipleSelection="false">
+      <configItem>
+        <name>swapcapsescaltctrl</name>
+        <description>Swap Caps Lock, Escape, Ctrl-L, and Alt-L</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>swapcapsescaltctrl:swap</name>
+          <description>Caps Lock(Ctrl-L), Ctrl-L(Alt-L), Esc(Caps Lock), Alt-L(Esc)</description>
+        </configItem>
+      </option>
+    </group>
+  </optionList>
+</xkbConfigRegistry>

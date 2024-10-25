@@ -1,0 +1,10 @@
+// vi:ft=xkb
+hidden partial modifier_keys
+xkb_symbols "swap" {
+    key <CAPS> {[ Control_L, Control_L ]};
+    key <ESC> {[ Caps_Lock ]};
+    key <LCTL> {[ Alt_L, Meta_L ]};
+    key <LALT> {[ Escape ], type[group1] = "ONE_LEVEL"};
+    modifier_map Mod1 { <LCTL>, <RALT> };
+    modifier_map Control { <ESC>, <RCTL> };
+};

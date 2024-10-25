@@ -1,0 +1,11 @@
+[settings]
+experimental = true
+python_compile = true
+
+[tools]
+usage = "latest"
+deno = "latest"
+elixir = "latest"
+go = "latest"
+erlang = "latest"
+lua-language-server = "latest"

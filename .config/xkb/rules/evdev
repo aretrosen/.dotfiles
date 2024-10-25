@@ -1,0 +1,4 @@
+! option = symbols
+  swapcapsescaltctrl:swap = +swapcapsescaltctrl(swap)
+
+! include %S/evdev

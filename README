@@ -1,0 +1,6 @@
+# My dotfiles
+
+## For pytorch with conda
+- Write the pinned packages in $CONDA_PREFIX/conda-meta/pinned
+- Write the channels in $CONDA_PREFIX/.condarc
+

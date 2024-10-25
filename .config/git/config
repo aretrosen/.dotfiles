@@ -1,0 +1,14 @@
+[user]
+	email = aretrosen@proton.me
+	name = Aritro Sen
+[init]
+	defaultBranch = master
+[status]
+	submoduleSummary = true
+[diff]
+	submodule = log
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
