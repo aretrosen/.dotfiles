@@ -7,3 +7,6 @@
 [submodule ".config/emacs"]
 	path = .config/emacs
 	url = git@github.com:aretrosen/emacs.git
+[submodule ".config/alacritty/themes"]
+	path = .config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme.git
