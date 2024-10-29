@@ -288,13 +288,6 @@ yes | mix archive.install hex phx_new || {
 }
 
 
-if ! flatpak update --assumeyes; then
-    _perr "Could not update flatpak packages"
-    exit 1
-else
-	flatpak remove --unused
-fi
-
 if ! git -C $ZDOTDIR submodule update --remote --merge; then
     _perr "Could not update zsh plugins"
     exit 1
