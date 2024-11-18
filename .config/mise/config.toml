@@ -1,13 +1,25 @@
 [settings]
 experimental = true
-python_compile = true
+python.compile = true
+pipx.uvx = true
+not_found_auto_install = false
 
 [tools]
 usage = "latest"
 deno = "latest"
 elixir = "latest"
 go = "latest"
-erlang = "latest"
 lua-language-server = "latest"
 gleam = "latest"
 odin = "latest"
+zig = "latest"
+erlang = "latest"
+c3 = "latest"
+bun = "latest"
+binaryen = "latest"
+wasmtime = "latest"
+wasmer = "latest"
+
+[plugins]
+c3 = "https://github.com/RobLoach/asdf-c3.git"
+binaryen = "https://github.com/birros/asdf-binaryen.git"

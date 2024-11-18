@@ -40,7 +40,7 @@ sudo apt-file update || {
         return 1
         }
         {
-			sudo make clean &&
+			make clean &&
 			make distclean &&
 			git pull --recurse-submodules --all &&
 			cmake -S cmake.deps -B .deps -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_C_FLAGS="-O3 -funroll-loops -fomit-frame-pointer -march=native -mtune=native -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -fstrict-flex-arrays=3 -fcf-protection -fstack-protector-strong -fstack-clash-protection -fno-delete-null-pointer-checks -fno-strict-overflow -fno-strict-aliasing -ftrivial-auto-var-init=zero -fPIC -shared -Wl,-z,relro -Wl,-z,now -Wl,-z,nodlopen -Wl,-z,noexecstack" &&
@@ -182,6 +182,15 @@ sudo apt-file update || {
 	fi
 ) || _perr "Cargo packages can't be updated. Install cargo update using:\ncargo install --git https://github.com/nabijaczleweli/cargo-update.git\ncargo install-update -a -g"
 
+
+if ! deno completions zsh >| $ZDOTDIR/.zfunc/_deno; then
+	_perr "Couldn't generate deno completions"
+fi
+
+if ! bun completions >| $ZDOTDIR/.zfunc/_bun; then
+	_perr "Couldn't generate bun completions"
+fi
+
 (
 	if ! command -v micromamba &> /dev/null; then
 	  if ! "${SHELL}" <(curl -L micro.mamba.pm/install.sh); then
@@ -291,6 +300,10 @@ yes | mix archive.install hex phx_new || {
 if ! git -C $ZDOTDIR submodule update --remote --merge; then
     _perr "Could not update zsh plugins"
     exit 1
+fi
+
+if [[ -f /usr/lib/kitty/shell-integration/zsh/completions/_kitty ]]; then
+	cp "/usr/lib/kitty/shell-integration/zsh/completions/_kitty" "$ZDOTDIR/.zfunc/_kitty"
 fi
 
 unset _pok
