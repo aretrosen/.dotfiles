@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/keyrings/protonvpn-beta-archive-keyring.gpg] https://repo.protonvpn.com/debian unstable main

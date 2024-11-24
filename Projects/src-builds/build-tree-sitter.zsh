@@ -8,7 +8,7 @@ fi
 
 pushd tree-sitter
 git pull --recurse-submodules --all
-make PREFIX=/usr/local LDFLAGS="-flto" CFLAGS="-flto" CXXFLAGS="-flto"
+sudo make PREFIX=/usr/local LDFLAGS="-flto" CFLAGS="-flto" CXXFLAGS="-flto"
 pushd cli
 cargo build --release
 popd

@@ -1,0 +1,2 @@
+deb [signed-by=/etc/apt/keyrings/apt.llvm.org.gpg] http://apt.llvm.org/unstable/ llvm-toolchain main
+deb-src [signed-by=/etc/apt/keyrings/apt.llvm.org.gpg] http://apt.llvm.org/unstable/ llvm-toolchain main

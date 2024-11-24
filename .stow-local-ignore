@@ -1,9 +1,0 @@
-^/README.*
-^/LICENSE.*
-
-\.git
-\.gitignore
-\.gitmodules
-
-_etc_zsh_zshenv
-micromamba

@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/keyrings/mullvad-keyring.gpg arch=amd64] https://repository.mullvad.net/deb/beta trixie main

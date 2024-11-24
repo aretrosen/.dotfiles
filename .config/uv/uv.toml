@@ -1,7 +1,5 @@
 compile-bytecode = true
+concurrent-builds = 8
 preview = true
+prerelease = "allow"
 python-downloads = "manual"
-
-[pip]
-compile-bytecode = true
-strict = true

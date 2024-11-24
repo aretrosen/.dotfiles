@@ -3,3 +3,5 @@
 .env
 compile_commands.json
 .cache/
+tags
+TAGS

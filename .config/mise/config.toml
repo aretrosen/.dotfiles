@@ -1,25 +1,37 @@
 [settings]
+auto_install = false
+cache_prune_age = "10d"
+exec_auto_install = false
 experimental = true
-python.compile = true
-pipx.uvx = true
+fetch_remote_versions_timeout = "1m"
+go_default_packages_file = "/home/aritro/.config/mise/default-go-packages"
+go_set_gobin = false
+http_timeout = "1m"
+idiomatic_version_file = false
 not_found_auto_install = false
+plugin_autoupdate_last_check_duration = "1d"
+
+[settings.erlang]
+compile = true
+
+[settings.python]
+compile = true
+
+[settings.status]
+missing_tools = "never"
 
 [tools]
-usage = "latest"
+"asdf:birros/asdf-binaryen" = "latest"
+"asdf:jtakakura/asdf-odin" = "latest"
+bun = "latest"
 deno = "latest"
 elixir = "latest"
-go = "latest"
-lua-language-server = "latest"
-gleam = "latest"
-odin = "latest"
-zig = "latest"
 erlang = "latest"
-c3 = "latest"
-bun = "latest"
-binaryen = "latest"
+gleam = "latest"
+go = "latest"
+hadolint = "latest"
+lua-language-server = "latest"
+opam = "latest"
+usage = "latest"
 wasmtime = "latest"
-wasmer = "latest"
-
-[plugins]
-c3 = "https://github.com/RobLoach/asdf-c3.git"
-binaryen = "https://github.com/birros/asdf-binaryen.git"
+zig = "latest"
