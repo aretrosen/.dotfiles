@@ -1,25 +1,33 @@
 [settings]
+cache_prune_age = "10d"
 experimental = true
-python.compile = true
-pipx.uvx = true
+jobs = 8
 not_found_auto_install = false
+pipx.uvx = true
+plugin_autoupdate_last_check_duration = "1d"
+python.compile = true
+fetch_remote_versions_timeout = "30s"
+http_timeout = "60s"
 
 [tools]
-usage = "latest"
+binaryen = "latest"
+bun = "latest"
+c3 = "latest"
 deno = "latest"
 elixir = "latest"
-go = "latest"
-lua-language-server = "latest"
-gleam = "latest"
-odin = "latest"
-zig = "latest"
 erlang = "latest"
-c3 = "latest"
-bun = "latest"
-binaryen = "latest"
-wasmtime = "latest"
+gleam = "latest"
+go = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+golangci-lint = "latest"
+hadolint = "latest"
+lua-language-server = "latest"
+ollama = "latest"
+usage = "latest"
 wasmer = "latest"
+wasmtime = "latest"
+zig = "latest"
 
-[plugins]
-c3 = "https://github.com/RobLoach/asdf-c3.git"
-binaryen = "https://github.com/birros/asdf-binaryen.git"
+[alias]
+c3 = 'asdf:RobLoach/asdf-c3'
+binaryen = "asdf:birros/asdf-binaryen"

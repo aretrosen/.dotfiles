@@ -43,14 +43,12 @@ sudo apt-file update || {
 			make clean &&
 			make distclean &&
 			git pull --recurse-submodules --all &&
-			cmake -S cmake.deps -B .deps -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_C_FLAGS="-O3 -funroll-loops -fomit-frame-pointer -march=native -mtune=native -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -fstrict-flex-arrays=3 -fcf-protection -fstack-protector-strong -fstack-clash-protection -fno-delete-null-pointer-checks -fno-strict-overflow -fno-strict-aliasing -ftrivial-auto-var-init=zero -fPIC -shared -Wl,-z,relro -Wl,-z,now -Wl,-z,nodlopen -Wl,-z,noexecstack" &&
-			cmake --build .deps &&
-			cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_C_FLAGS="-O3 -funroll-loops -fomit-frame-pointer -march=native -mtune=native -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -fstrict-flex-arrays=3 -fcf-protection -fstack-protector-strong -fstack-clash-protection -fno-delete-null-pointer-checks -fno-strict-overflow -fno-strict-aliasing -ftrivial-auto-var-init=zero -fPIE" &&
-			cmake --build build &&
-			pushd build &&
-			cpack -G DEB &&
-			sudo dpkg -i nvim-linux64.deb &&
-			popd
+			make CMAKE_BUILD_TYPE=Release &&
+			sudo make install
+			# pushd build &&
+			# cpack -G DEB &&
+			# sudo dpkg -i nvim-linux64.deb &&
+			# popd
         } || {
             _perr "Could't install neovim"
             return 1
@@ -130,6 +128,8 @@ sudo apt-file update || {
 		exit 1
 	fi
 
+	eval "$(command mise activate zsh)"
+
 	if ! mise self-update --yes; then
 		_perr "Couldn't self-update mise"
 		exit 1
@@ -145,6 +145,8 @@ sudo apt-file update || {
 		exit 1
 	fi
 ) || _perr "Updating mise failed. Install it if it isn't, then run: mise self-update --yes\nmise completion zsh >| \$ZDOTDIR/.zfunc/_mise\nmise up --yes"
+
+eval "$(command mise activate zsh)"
 
 (
 	if ! command -v rustup &> /dev/null; then

@@ -13,6 +13,8 @@ application/x-extension-xht=firefox-devedition.desktop
 audio/x-opus+ogg=org.gnome.Rhythmbox3.desktop
 video/x-matroska=mpv.desktop
 video/vnd.avi=mpv.desktop
+video/mp4=mpv.desktop
+text/javascript=emacsclient.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox-devedition.desktop;
@@ -28,3 +30,5 @@ application/x-extension-xht=firefox-devedition.desktop;
 audio/x-opus+ogg=org.gnome.Rhythmbox3.desktop;
 video/x-matroska=mpv.desktop;
 video/vnd.avi=mpv.desktop;
+video/mp4=mpv.desktop;
+text/javascript=emacsclient.desktop;
