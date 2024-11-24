@@ -20,6 +20,6 @@ binaryen = "latest"
 wasmtime = "latest"
 wasmer = "latest"
 
-[plugins]
-c3 = "https://github.com/RobLoach/asdf-c3.git"
-binaryen = "https://github.com/birros/asdf-binaryen.git"
+[alias]
+c3 = "asdf:RobLoach/asdf-c3"
+binaryen = "asdf:birros/asdf-binaryen"
